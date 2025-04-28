@@ -1,0 +1,44 @@
+{
+    "cli": {
+        "version": ">= 5.9.1",
+        "appVersionSource": "remote"
+    },
+    "build": {
+        "development": {
+            "developmentClient": true,
+            "distribution": "internal",
+            "cache": {
+                "disabled": true
+            }
+        },
+        "preview": {
+            "distribution": "internal",
+            "android": {
+                "buildType": "apk",
+                "gradleCommand": ":app:assembleRelease",
+                "env": {
+                    "GRADLE_OPTS": "-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx2048m"
+                }
+            },
+            "cache": {
+                "disabled": true
+            }
+        },
+        "production": {
+            "android": {
+                "buildType": "apk",
+                "gradleCommand": ":app:assembleRelease",
+                "env": {
+                    "GRADLE_OPTS": "-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx2048m"
+                },
+                "image": "latest"
+            },
+            "cache": {
+                "disabled": true
+            }
+        }
+    },
+    "submit": {
+        "production": {}
+    }
+}

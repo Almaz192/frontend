@@ -1,0 +1,27 @@
+{
+    "expo": {
+        "name": "EneTyl",
+        "slug": "EneTyl",
+        "version": "1.0.0",
+        "owner": "almazinio",
+        "platforms": ["android", "ios", "web"],
+        "jsEngine": "hermes",
+        "sdkVersion": "52.0.0",
+        "runtimeVersion": "1.0.0",
+        "assetBundlePatterns": ["**/*", "assets/**/*"],
+        "plugins": ["expo-secure-store"],
+        "extra": {
+            "eas": {
+                "projectId": "bd271527-8ce4-4b11-89e5-3749849274a7"
+            }
+        },
+        "android": {
+            "package": "com.almazinio.EneTyl",
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/icon.png",
+                "backgroundColor": "#ffffff"
+            },
+            "permissions": ["INTERNET", "ACCESS_NETWORK_STATE"]
+        }
+    }
+}
